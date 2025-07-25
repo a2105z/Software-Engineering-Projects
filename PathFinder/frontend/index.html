@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PathFinder</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Define a professional color palette -->
+  <style>
+    :root {
+      --color-bg: #f0f4f8;
+      --color-header-bg: #0a3d62;
+      --color-header-text: #ffffff;
+      --color-button-bg: #1e3799;
+      --color-button-hover: #3c40c6;
+      --color-select-bg: #ffffff;
+      --color-select-border: #1e3799;
+      --color-grid-border: #d1d8e0;
+      --color-cell-wall: #2f3542;
+      --color-cell-start: #ffa502;
+      --color-cell-end: #ff4757;
+      --color-cell-visited: #70a1ff;
+      --color-cell-path: #2ed573;
+    }
+  </style>
+</head>
+<body class="professional-theme">
+  <header class="controls">
+    <h1>PathFinder</h1>
+    <label for="algorithm">Algorithm:</label>
+    <select id="algorithm">
+      <option value="bfs">Breadth‑First Search</option>
+      <option value="dfs">Depth‑First Search</option>
+      <option value="dijkstra">Dijkstra’s Algorithm</option>
+      <option value="astar">A* Search</option>
+      <option value="bidirectional">Bidirectional Search</option>
+      <option value="gbfs">Greedy Best‑First Search</option>
+      <option value="jps">Jump Point Search</option>
+      <option value="rbfs">Recursive Best‑First Search</option>
+    </select>
+    <button id="run-btn">Run</button>
+    <button id="clear-btn">Clear</button>
+  </header>
+
+  <main>
+    <div id="grid" class="grid-container"></div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

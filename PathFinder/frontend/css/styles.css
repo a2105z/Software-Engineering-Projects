@@ -1,0 +1,135 @@
+/* frontend/css/styles.css */
+
+/* Professional color palette */
+:root {
+  --color-bg: #f0f4f8;
+  --color-header-bg: #0a3d62;
+  --color-header-text: #ffffff;
+  --color-button-bg: #1e3799;
+  --color-button-hover: #3c40c6;
+  --color-select-bg: #ffffff;
+  --color-select-border: #1e3799;
+  --color-grid-border: #d1d8e0;
+  --color-cell-wall: #2f3542;
+  --color-cell-start: #ffa502;
+  --color-cell-end: #ff4757;
+  --color-cell-visited: #70a1ff;
+  --color-cell-path: #2ed573;
+  --color-cell-border: #d1d8e0;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-header-text);
+}
+
+/* Header controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-header-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls h1 {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  color: var(--color-header-text);
+}
+
+.controls label {
+  font-weight: bold;
+  color: var(--color-header-text);
+}
+
+.controls select,
+.controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-select-border);
+  border-radius: 4px;
+  background: var(--color-select-bg);
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.controls select:hover {
+  background: var(--color-header-text);
+}
+
+.controls button {
+  background: var(--color-button-bg);
+  color: var(--color-header-text);
+  border-color: var(--color-button-bg);
+}
+
+.controls button:hover {
+  background: var(--color-button-hover);
+}
+
+/* Main grid container */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  /* columns/rows set dynamically via JS */
+  border: 2px solid var(--color-grid-border);
+  background: #fff;
+}
+
+/* Individual grid cells */
+.cell {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-cell-border);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.cell.empty {
+  background: #ffffff;
+}
+
+.cell.wall {
+  background: var(--color-cell-wall);
+}
+
+.cell.start {
+  background: var(--color-cell-start);
+}
+
+.cell.end {
+  background: var(--color-cell-end);
+}
+
+.cell.visited {
+  background: var(--color-cell-visited);
+}
+
+.cell.path {
+  background: var(--color-cell-path);
+}
+
+/* Disable pointer events when animating */
+.animating .cell {
+  pointer-events: none;
+}
