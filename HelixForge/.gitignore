@@ -1,0 +1,63 @@
+# Build artifacts
+build/
+build-*/
+cmake-build-*/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+*.egg
+
+# Output files
+*.json
+*.fasta
+*.fa
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Compiled binaries
+helixforge
+pyhelixforge*.so
+
+# Documentation
+docs/_build/
+*.pdf
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
