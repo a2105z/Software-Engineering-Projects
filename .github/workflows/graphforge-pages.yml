@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'docs/**'
       - 'TI84Calc/docs/**'
 
 jobs:
@@ -26,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: TI84Calc/docs
+          path: docs
 
       - name: Deploy to GitHub Pages
         id: deployment
